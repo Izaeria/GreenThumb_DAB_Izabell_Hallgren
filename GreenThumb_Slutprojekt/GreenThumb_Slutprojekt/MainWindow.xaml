@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="Images/BgImage.jpg"/>
+        </Grid.Background>-->
 
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="2" Grid.Row="2" FontSize="40" Text="GreenThumb" HorizontalAlignment="Center" />
+        <Button x:Name="EnterBtn" Content="Enter" Click="EnterBtn_Click" Grid.Column="2" Grid.Row="3"/>
     </Grid>
 </Window>

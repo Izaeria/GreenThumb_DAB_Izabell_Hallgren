@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="PlantWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="2" Grid.Row="2" FontSize="40" Text="Plants" HorizontalAlignment="Center" />
+        <Button x:Name="PlantDetailsBtn" Content="Plant Details" Click="PlantDetailsBtn_Click" Grid.Column="2" Grid.Row="3"/>
     </Grid>
 </Window>
