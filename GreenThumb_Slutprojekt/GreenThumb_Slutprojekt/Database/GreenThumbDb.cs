@@ -19,8 +19,33 @@ namespace GreenThumb_Slutprojekt.Database
 		//Connection String
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
+			base.OnConfiguring(optionsBuilder);
+
 			optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database =GreenThumbDb;Trusted_Connection=True;");
 		}
+
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			base.OnModelCreating(modelBuilder);
+
+			modelBuilder.Entity<PlantModel>().HasData(
+			new PlantModel("Gullranka") { PlantId = 1 },
+			new PlantModel("Peperomia") { PlantId = 2 }
+			);
+
+			modelBuilder.Entity<InstructionModel>().HasData(
+				new InstructionModel
+				{
+					InstructionId = 1,
+					InstructionName = "Vattning",
+					Instructions = " Håll jorden jämnt fuktig, men låt inte växten stå i vatten. Vattna när det översta lagret av jord känns torrt.",
+					PlantId = 1
+				}
+				);
+
+		}
+
 
 	}
 }

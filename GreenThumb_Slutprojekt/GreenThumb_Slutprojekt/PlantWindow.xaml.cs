@@ -24,7 +24,27 @@ namespace GreenThumb_Slutprojekt
 			InitializeComponent();
 		}
 
+		private void txtSearchPlant_TextChanged(object sender, System.EventArgs e)
+		{
+
+		}
+
+
+
 		private void PlantDetailsBtn_Click(object sender, RoutedEventArgs e)
+		{
+			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
+			plantDetailsWindow.Show();
+			Close();
+		}
+
+		private void DeletePlantBtn_Click(object sender, RoutedEventArgs e)
+		{
+			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
+			plantDetailsWindow.Show();
+			Close();
+		}
+		private void AddPlantBtn_Click(object sender, RoutedEventArgs e)
 		{
 			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
 			plantDetailsWindow.Show();

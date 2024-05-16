@@ -21,5 +21,18 @@ namespace GreenThumb_Slutprojekt.Models
 
 		public PlantModel Plant { get; set; } = null!;
 
+		public InstructionModel()
+		{
+
+		}
+
+		public InstructionModel(int instructionId, string instructionName, string instructions, int plantId, PlantModel plant)
+		{
+			InstructionId = instructionId;
+			InstructionName = instructionName;
+			Instructions = instructions;
+			PlantId = plantId;
+			Plant = plant;
+		}
 	}
 }

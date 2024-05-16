@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GreenThumb_Slutprojekt"
         mc:Ignorable="d"
-        Title="PlantWindow" Height="450" Width="800">
+        Title="PlantWindow" Height="450" Width="800" Background="AliceBlue">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -20,21 +20,22 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="50"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="3" Grid.Row="1" FontSize="40" Text="Plants" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="4" Grid.Row="1" FontSize="40" Text="Plants" HorizontalAlignment="Center" />
+        <ListView Name="lstPlants" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" />
 
-        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="20" Text="Search plants" />
-        <TextBox Name="txtSearchPlant" Grid.Column="2" Grid.Row="2" Background="AliceBlue" TextChanged="txtSearchPlant_TextChanged"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="20" Text="Search plants"  VerticalAlignment="Center"/>
+        <TextBox Name="txtSearchPlant" Grid.Column="2" Grid.Row="2" TextChanged="txtSearchPlant_TextChanged" Height="30" Margin="5,0,5,0" VerticalAlignment="Center"/>
 
-        <Button x:Name="PlantDetailsBtn" Content="Details" Click="PlantDetailsBtn_Click" Grid.Column="3" Grid.Row="5"/>
-        <Button x:Name="AddPlantBtn" Content="Add Plant" Click="AddPlantBtn_Click" Grid.Column="4" Grid.Row="5"/>
-        <Button x:Name="DeletePlantBtn" Content="Delete Plant" Click="DeletePlantBtn_Click" Grid.Column="5" Grid.Row="5"/>
+        <Button x:Name="PlantDetailsBtn" Content="Details" Click="PlantDetailsBtn_Click" Grid.Column="3" Grid.Row="6" Margin="10,5,5,10"/>
+        <Button x:Name="AddPlantBtn" Content="Add Plant" Click="AddPlantBtn_Click" Grid.Column="4" Grid.Row="6" Margin="10,5,5,10"/>
+        <Button x:Name="DeletePlantBtn" Content="Delete Plant" Click="DeletePlantBtn_Click" Grid.Column="5" Grid.Row="6" Margin="10,5,5,10"/>
     </Grid>
 </Window>
