@@ -18,6 +18,13 @@ namespace GreenThumb_Slutprojekt.Models
 
 		public List<InstructionModel> Instructions { get; set; } = new();
 
+
+		public PlantModel()
+		{
+
+		}
+
+
 		public PlantModel(string plantName)
 		{
 			PlantName = plantName;

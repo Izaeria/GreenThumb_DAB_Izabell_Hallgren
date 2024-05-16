@@ -35,12 +35,19 @@ namespace GreenThumb_Slutprojekt.Database
 			);
 
 			modelBuilder.Entity<InstructionModel>().HasData(
-				new InstructionModel
+				new InstructionModel()
 				{
 					InstructionId = 1,
 					InstructionName = "Vattning",
 					Instructions = " Håll jorden jämnt fuktig, men låt inte växten stå i vatten. Vattna när det översta lagret av jord känns torrt.",
-					PlantId = 1
+					PlantId = 1,
+				},
+				new InstructionModel()
+				{
+					InstructionId = 2,
+					InstructionName = "Vattning",
+					Instructions = " Håll jorden jämnt fuktig, men låt inte växten stå i vatten. Vattna när det översta lagret av jord känns torrt.",
+					PlantId = 2,
 				}
 				);
 

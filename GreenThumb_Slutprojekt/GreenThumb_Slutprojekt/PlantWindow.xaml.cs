@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GreenThumb_Slutprojekt.Database;
+using GreenThumb_Slutprojekt.Models;
+using GreenThumb_Slutprojekt.Repositories;
 
 namespace GreenThumb_Slutprojekt
 {
@@ -19,18 +22,41 @@ namespace GreenThumb_Slutprojekt
 	/// </summary>
 	public partial class PlantWindow : Window
 	{
+		private List<PlantModel> getAllPlants;
+
 		public PlantWindow()
 		{
 			InitializeComponent();
-		}
 
+
+
+
+			LoadAllPlantsAsync();
+
+			async void LoadAllPlantsAsync()
+			{
+				using (GreenThumbDb context = new())
+				{
+					PlantRepository<PlantModel> plantRepository = new(context);
+
+					getAllPlants = await plantRepository.GetAll();
+
+					foreach (var plant in getAllPlants)
+					{
+						ListViewItem item = new();
+						item.Tag = plant;
+						item.Content = plant.PlantName;
+
+						lstPlants.Items.Add(item);
+					}
+				}
+			}
+
+		}
 		private void txtSearchPlant_TextChanged(object sender, System.EventArgs e)
 		{
 
 		}
-
-
-
 		private void PlantDetailsBtn_Click(object sender, RoutedEventArgs e)
 		{
 			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
