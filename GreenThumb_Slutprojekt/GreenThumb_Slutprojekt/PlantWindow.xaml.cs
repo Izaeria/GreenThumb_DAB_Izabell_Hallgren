@@ -80,6 +80,8 @@ namespace GreenThumb_Slutprojekt
 		}
 		private void PlantDetailsBtn_Click(object sender, RoutedEventArgs e)
 		{
+
+			//TODO Message box if no plant has been selected
 			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
 			plantDetailsWindow.Show();
 			Close();
@@ -87,6 +89,8 @@ namespace GreenThumb_Slutprojekt
 
 		private void DeletePlantBtn_Click(object sender, RoutedEventArgs e)
 		{
+
+			//TODO delete plant from database, confirmation message
 			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
 			plantDetailsWindow.Show();
 			Close();
