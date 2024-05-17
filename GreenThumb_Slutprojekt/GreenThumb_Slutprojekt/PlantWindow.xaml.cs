@@ -46,16 +46,37 @@ namespace GreenThumb_Slutprojekt
 						ListViewItem item = new();
 						item.Tag = plant;
 						item.Content = plant.PlantName;
-
 						lstPlants.Items.Add(item);
 					}
 				}
 			}
 
 		}
+
+		//Filtrera växter enligt input i sökrutan
 		private void txtSearchPlant_TextChanged(object sender, System.EventArgs e)
 		{
+			using (GreenThumbDb context = new())
+			{
+				var repository = new PlantRepository<PlantModel>(context);
 
+				//User input
+				string searchPlant = txtSearchPlant.Text.ToLower();
+
+				lstPlants.Items.Clear();
+
+				//Filtrerar växterna baserat på User Inpu
+				var filteredPlant = getAllPlants.Where(p => p.PlantName.ToLower().Contains(searchPlant));
+
+				foreach (var plant in filteredPlant)
+				{
+					ListViewItem item = new();
+					item.Tag = plant;
+					item.Content = plant.PlantName;
+					lstPlants.Items.Add(item);
+				}
+
+			}
 		}
 		private void PlantDetailsBtn_Click(object sender, RoutedEventArgs e)
 		{

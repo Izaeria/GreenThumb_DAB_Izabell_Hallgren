@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using GreenThumb_Slutprojekt.Models;
+
 namespace GreenThumb_Slutprojekt
 {
 	/// <summary>
@@ -22,6 +24,18 @@ namespace GreenThumb_Slutprojekt
 		public PlantDetailsWindow()
 		{
 			InitializeComponent();
+
+		}
+
+
+
+
+
+		private void goBackBtn_Click(object sender, RoutedEventArgs e)
+		{
+			MainWindow mainWindow = new MainWindow();
+			mainWindow.Show();
+			this.Close();
 		}
 	}
 }

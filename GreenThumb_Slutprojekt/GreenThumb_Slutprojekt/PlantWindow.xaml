@@ -36,6 +36,6 @@
 
         <Button x:Name="PlantDetailsBtn" Content="Details" Click="PlantDetailsBtn_Click" Grid.Column="3" Grid.Row="6" Margin="10,5,5,10"/>
         <Button x:Name="AddPlantBtn" Content="Add Plant" Click="AddPlantBtn_Click" Grid.Column="4" Grid.Row="6" Margin="10,5,5,10"/>
-        <Button x:Name="DeletePlantBtn" Content="Delete Plant" Click="DeletePlantBtn_Click" Grid.Column="5" Grid.Row="6" Margin="10,5,5,10"/>
+        <Button x:Name="DeletePlantBtn" Content="Remove" Click="DeletePlantBtn_Click" Grid.Column="5" Grid.Row="6" Margin="10,5,5,10"/>
     </Grid>
 </Window>
