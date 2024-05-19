@@ -50,5 +50,10 @@ namespace GreenThumb_Slutprojekt
 			mainWindow.Show();
 			this.Close();
 		}
+
+		private void txtPlant_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
 	}
 }
