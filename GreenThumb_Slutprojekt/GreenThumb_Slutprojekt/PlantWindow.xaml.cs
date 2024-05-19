@@ -94,6 +94,10 @@ namespace GreenThumb_Slutprojekt
 				plantDetailsWindow.Show();
 				Close();
 			}
+			else
+			{
+				MessageBox.Show("You need to select a plant to view any details!");
+			}
 
 		}
 

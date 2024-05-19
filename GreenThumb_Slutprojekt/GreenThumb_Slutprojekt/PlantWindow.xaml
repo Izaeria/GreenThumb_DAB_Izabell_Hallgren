@@ -35,11 +35,12 @@
         <TextBlock Grid.Column="4" Grid.Row="1" FontSize="40" Text="Plants" HorizontalAlignment="Center" />
         <ListView Name="lstPlants" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" />
 
-        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="20" Text="Search plants"  VerticalAlignment="Center"/>
-        <TextBox Name="txtSearchPlant" Grid.Column="2" Grid.Row="2" TextChanged="txtSearchPlant_TextChanged" Height="30" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" FontSize="20" Text="Search plants"  VerticalAlignment="Center"/>
+        <TextBox Name="txtSearchPlant" Grid.Column="2" Grid.Row="3" TextChanged="txtSearchPlant_TextChanged" Height="30" Margin="5,0,5,0" VerticalAlignment="Center"/>
 
-        <Button x:Name="PlantDetailsBtn" Content="Details" Click="PlantDetailsBtn_Click" Grid.Column="3" Grid.Row="6" Margin="10,5,5,10"/>
-        <Button x:Name="AddPlantBtn" Content="Add Plant" Click="AddPlantBtn_Click" Grid.Column="4" Grid.Row="6" Margin="10,5,5,10"/>
-        <Button x:Name="DeletePlantBtn" Content="Remove" Click="DeletePlantBtn_Click" Grid.Column="5" Grid.Row="6" Margin="10,5,5,10"/>
+        <Button x:Name="PlantDetailsBtn" Content="Details" Click="PlantDetailsBtn_Click" Grid.Column="3" Grid.Row="6" Margin="10,5,5,10" Background="DarkSeaGreen" BorderBrush="Transparent"/>
+        <Button x:Name="AddPlantBtn" Content="Add Plant" Click="AddPlantBtn_Click" Grid.Column="4" Grid.Row="6" Margin="10,5,5,10" Background="DarkSeaGreen" BorderBrush="Transparent"/>
+        <Button x:Name="DeletePlantBtn" Content="Remove" Click="DeletePlantBtn_Click" Grid.Column="5" Grid.Row="6" Margin="10,5,5,10" Background="DarkSeaGreen" BorderBrush="Transparent"/>
+
     </Grid>
 </Window>

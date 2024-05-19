@@ -34,8 +34,8 @@
         <TextBox Name="txtInstructions"  Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="2" />
 
 
-        <Button x:Name="addPlantBtn" Content="Add plant" Click="addPlantBtn_Click" Grid.Column="2" Grid.Row="5"/>
-        <Button x:Name="goBackBtn" Content="Go back to previous page" Click="goBackBtn_Click" Grid.Column="3" Grid.Row="5"/>
+        <Button x:Name="addPlantBtn" Content="Add plant" Click="addPlantBtn_Click" Grid.Column="2" Grid.Row="5" Background="DarkSeaGreen" BorderBrush="Transparent"/>
+        <Button x:Name="goBackBtn" Content="Go back to previous page" Click="goBackBtn_Click" Grid.Column="3" Grid.Row="5" Background="DarkSeaGreen" BorderBrush="Transparent"/>
 
     </Grid>
 

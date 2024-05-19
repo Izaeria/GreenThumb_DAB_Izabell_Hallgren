@@ -25,18 +25,18 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="70"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="40" Text="Plant" HorizontalAlignment="Center" />
-        <TextBox Name="txtPlant" IsReadOnly="True" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" FontSize="40"  HorizontalAlignment="Center" Width="500" TextChanged="txtPlant_TextChanged" Background="Transparent" BorderBrush="Transparent" />
+        <TextBox Name="txtPlant" IsReadOnly="True" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" FontSize="40"  HorizontalAlignment="Center" Width="500" TextChanged="txtPlant_TextChanged" FontStyle="Italic"  Background="Transparent" BorderBrush="Transparent" />
         <TextBlock Grid.Column="1" Grid.Row="2" FontSize="30" Text="Instructions" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
         <TextBox Name="txtInstructions" IsReadOnly="True" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="2" />
 
-        <Button x:Name="goBackBtn" Content="Go back to previous page" Click="goBackBtn_Click" Grid.Column="3" Grid.Row="5"/>
+        <Button x:Name="goBackBtn" Content="Go back to previous page" Click="goBackBtn_Click" Grid.Column="3" Grid.Row="5" Background="DarkSeaGreen" BorderBrush="Transparent"/>
 
     </Grid>
 </Window>

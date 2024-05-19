@@ -33,7 +33,8 @@ namespace GreenThumb_Slutprojekt
 			//Kollar om alla fällt är ifyllda
 			if (string.IsNullOrWhiteSpace(txtInstructions.Text) || string.IsNullOrWhiteSpace(txtPlantName.Text))
 			{
-				MessageBox.Show("Du måste skriva in både namn och instruktion för att lägga till en växt!");
+				MessageBox.Show("You need to write the name and instrictions to add a plant!");
+
 			}
 
 			else
@@ -48,7 +49,7 @@ namespace GreenThumb_Slutprojekt
 
 					if (plantExists)
 					{
-						MessageBox.Show("Växten finns redan i databasen!");
+						MessageBox.Show("This plant already exists in the database!");
 						return;
 					}
 
@@ -70,7 +71,7 @@ namespace GreenThumb_Slutprojekt
 					context.Plants.Add(newPlant);
 					context.SaveChanges();
 
-					MessageBox.Show("Växten har lagts till i databasen!");
+					MessageBox.Show("Plant added to database!");
 				}
 			}
 		}
