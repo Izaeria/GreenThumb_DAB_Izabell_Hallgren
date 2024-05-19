@@ -22,9 +22,12 @@ namespace GreenThumb_Slutprojekt
 	public partial class PlantDetailsWindow : Window
 	{
 
+		//Deklarerar och sparat ett privat fält sparar informationen om den valda växten så denna kan användas i fönstret.
 		private PlantModel selectedPlant;
 
 
+
+		//Fyller i textboxen med instruktioner om den valda plantan från databasen
 		public PlantDetailsWindow(PlantModel plantDetails)
 		{
 
@@ -46,8 +49,8 @@ namespace GreenThumb_Slutprojekt
 
 		private void goBackBtn_Click(object sender, RoutedEventArgs e)
 		{
-			MainWindow mainWindow = new MainWindow();
-			mainWindow.Show();
+			PlantWindow plantWindow = new PlantWindow();
+			plantWindow.Show();
 			this.Close();
 		}
 

@@ -23,5 +23,18 @@ namespace GreenThumb_Slutprojekt
 		{
 			InitializeComponent();
 		}
+
+		private void addPlantBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void goBackBtn_Click(object sender, RoutedEventArgs e)
+		{
+			PlantWindow plantWindow = new PlantWindow();
+			plantWindow.Show();
+			this.Close();
+		}
+
 	}
 }

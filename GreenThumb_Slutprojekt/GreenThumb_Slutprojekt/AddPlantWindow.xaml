@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GreenThumb_Slutprojekt"
         mc:Ignorable="d"
-        Title="AddPlantWindow" Height="450" Width="800">
+        Title="AddPlantWindow" Height="450" Width="800" Background="AliceBlue">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="40" Text="Plant:" HorizontalAlignment="Center" />
+        <TextBox Name="txtPlant" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" FontSize="40" HorizontalAlignment="Center" Width="500" />
+        <TextBox Name="txtInstructions"  Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="2" />
+
+
+        <Button x:Name="addPlantBtn" Content="Add plant" Click="addPlantBtn_Click" Grid.Column="2" Grid.Row="5"/>
+        <Button x:Name="goBackBtn" Content="Go back to previous page" Click="goBackBtn_Click" Grid.Column="3" Grid.Row="5"/>
+
     </Grid>
+
 </Window>

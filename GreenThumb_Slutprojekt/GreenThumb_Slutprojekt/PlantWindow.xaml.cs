@@ -33,6 +33,7 @@ namespace GreenThumb_Slutprojekt
 
 			LoadAllPlantsAsync();
 
+			//Metod som laddar alla växter i databasen
 			async void LoadAllPlantsAsync()
 			{
 				using (GreenThumbDb context = new())
@@ -65,7 +66,7 @@ namespace GreenThumb_Slutprojekt
 
 				lstPlants.Items.Clear();
 
-				//Filtrerar växterna baserat på User Inpu
+				//Filtrerar växterna baserat på User Input
 				var filteredPlant = getAllPlants.Where(p => p.PlantName.ToLower().Contains(searchPlant));
 
 				foreach (var plant in filteredPlant)
@@ -93,19 +94,6 @@ namespace GreenThumb_Slutprojekt
 				plantDetailsWindow.Show();
 				Close();
 			}
-
-
-			//ListViewItem selectedPlantDetails = (ListViewItem)lstPlants.SelectedItem;
-			//if (lstPlants.SelectedItem != null)
-			//{
-
-			//	plantDetailsWindow.Show();
-			//	Close();
-			//}
-			//else
-			//{
-			//	MessageBox.Show("You need to select a plant to see details!");
-			//}
 
 		}
 
