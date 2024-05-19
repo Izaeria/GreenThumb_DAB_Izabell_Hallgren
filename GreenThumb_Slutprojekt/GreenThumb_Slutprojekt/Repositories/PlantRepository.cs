@@ -24,5 +24,12 @@ namespace GreenThumb_Slutprojekt.Repositories
 		{
 			return await _dbSet.ToListAsync();
 		}
+
+
+		public async Task Delete(T entity)
+		{
+			_dbSet.Remove(entity);
+			await _context.SaveChangesAsync();
+		}
 	}
 }

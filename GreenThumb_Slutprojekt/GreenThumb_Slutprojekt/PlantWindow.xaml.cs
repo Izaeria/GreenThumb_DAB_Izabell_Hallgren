@@ -78,27 +78,62 @@ namespace GreenThumb_Slutprojekt
 
 			}
 		}
+
+		//Visar den valda växtens information i ett nytt fönster
 		private void PlantDetailsBtn_Click(object sender, RoutedEventArgs e)
 		{
 
-			//TODO Message box if no plant has been selected
-			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
-			plantDetailsWindow.Show();
-			Close();
+
+			ListViewItem selectedPlant = (ListViewItem)lstPlants.SelectedItem;
+			if (selectedPlant != null)
+			{
+				PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
+				plantDetailsWindow.Show();
+				Close();
+			}
+			else
+			{
+				MessageBox.Show("You need to select a plant to see details!");
+			}
+
 		}
 
+		//Tar bort en växt
 		private void DeletePlantBtn_Click(object sender, RoutedEventArgs e)
 		{
+			if (lstPlants.SelectedItem != null)
+			{
+				ListViewItem selectedPlant = (ListViewItem)lstPlants.SelectedItem;
+				PlantModel removePlant = (PlantModel)selectedPlant.Tag;
+				MessageBoxResult answer = MessageBox.Show($"Are you sure you want to delete this plant?", "Delete Confirmation", MessageBoxButton.YesNo);
 
-			//TODO delete plant from database, confirmation message
-			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
-			plantDetailsWindow.Show();
-			Close();
+				if (answer == MessageBoxResult.Yes)
+				{
+					//Ta bort växten från listan
+					lstPlants.Items.Remove(lstPlants.SelectedItem);
+
+
+					//Ta bort växten från databasen
+					using (GreenThumbDb context = new())
+					{
+						PlantRepository<PlantModel> plantRepository = new(context);
+						plantRepository.Delete(removePlant);
+						MessageBox.Show($"Plant has been deleted!");
+					}
+				}
+			}
+			else
+			{
+				MessageBox.Show("You need to select a plant to delete!");
+			}
+
 		}
+
+		//Öppnar AddPlantWindows för att lägga till en ny växt
 		private void AddPlantBtn_Click(object sender, RoutedEventArgs e)
 		{
-			PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
-			plantDetailsWindow.Show();
+			AddPlantWindow addPlantWindow = new AddPlantWindow();
+			addPlantWindow.Show();
 			Close();
 		}
 	}
