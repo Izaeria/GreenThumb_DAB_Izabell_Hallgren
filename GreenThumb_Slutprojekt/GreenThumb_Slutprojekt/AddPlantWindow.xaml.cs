@@ -33,7 +33,7 @@ namespace GreenThumb_Slutprojekt
 			//Kollar om alla fällt är ifyllda
 			if (string.IsNullOrWhiteSpace(txtInstructions.Text) || string.IsNullOrWhiteSpace(txtPlantName.Text))
 			{
-				MessageBox.Show("You need to write the name and instrictions to add a plant!");
+				MessageBox.Show("You need to write the name and instructions to add a plant!");
 
 			}
 
