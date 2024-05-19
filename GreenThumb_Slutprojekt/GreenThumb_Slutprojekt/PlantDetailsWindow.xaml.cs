@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using GreenThumb_Slutprojekt.Database;
 using GreenThumb_Slutprojekt.Models;
 
 namespace GreenThumb_Slutprojekt
@@ -21,12 +21,25 @@ namespace GreenThumb_Slutprojekt
 	/// </summary>
 	public partial class PlantDetailsWindow : Window
 	{
-		public PlantDetailsWindow()
+
+		private PlantModel selectedPlant;
+
+
+		public PlantDetailsWindow(PlantModel plantDetails)
 		{
+
 			InitializeComponent();
+			txtPlant.Text = plantDetails.PlantName;
+			selectedPlant = plantDetails;
+
+			using (GreenThumbDb context = new())
+			{
+				var plantInstructions = context.Instructions.Where(plantInstruction => plantInstruction.PlantId == plantDetails.PlantId).ToList();
+
+				txtInstructions.Text = string.Join(Environment.NewLine, plantInstructions.Select(pi => pi.Instructions));
+			}
 
 		}
-
 
 
 

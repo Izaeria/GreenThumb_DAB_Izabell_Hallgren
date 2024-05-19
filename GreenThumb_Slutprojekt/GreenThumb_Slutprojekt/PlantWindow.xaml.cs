@@ -83,18 +83,29 @@ namespace GreenThumb_Slutprojekt
 		private void PlantDetailsBtn_Click(object sender, RoutedEventArgs e)
 		{
 
-
-			ListViewItem selectedPlant = (ListViewItem)lstPlants.SelectedItem;
-			if (selectedPlant != null)
+			if (lstPlants.SelectedItem != null)
 			{
-				PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow();
+				ListViewItem selectedItem = new ListViewItem();
+				selectedItem = (ListViewItem)lstPlants.SelectedItem;
+				PlantModel selectedPlant = (PlantModel)selectedItem.Tag;
+
+				PlantDetailsWindow plantDetailsWindow = new PlantDetailsWindow(selectedPlant);
 				plantDetailsWindow.Show();
 				Close();
 			}
-			else
-			{
-				MessageBox.Show("You need to select a plant to see details!");
-			}
+
+
+			//ListViewItem selectedPlantDetails = (ListViewItem)lstPlants.SelectedItem;
+			//if (lstPlants.SelectedItem != null)
+			//{
+
+			//	plantDetailsWindow.Show();
+			//	Close();
+			//}
+			//else
+			//{
+			//	MessageBox.Show("You need to select a plant to see details!");
+			//}
 
 		}
 

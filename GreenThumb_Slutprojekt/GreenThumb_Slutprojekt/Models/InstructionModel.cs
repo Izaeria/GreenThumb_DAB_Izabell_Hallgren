@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GreenThumb_Slutprojekt.Models
 {
-	internal class InstructionModel
+	public class InstructionModel
 	{
 		[Key]
 

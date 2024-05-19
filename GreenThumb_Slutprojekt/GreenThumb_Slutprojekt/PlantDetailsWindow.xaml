@@ -25,8 +25,8 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="40" Text="Plant" HorizontalAlignment="Center" />
-        <Label Name="lblPlant" Grid.Column="2" Grid.Row="1" FontSize="40"  HorizontalAlignment="Center" />
-        <ListView Name="lstPlants" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="2" />
+        <TextBox Name="txtPlant" Grid.Column="2" Grid.Row="1" FontSize="40"  HorizontalAlignment="Center" Width="150" />
+        <TextBox Name="txtInstructions" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="2" />
 
         <Button x:Name="goBackBtn" Content="Go back to previous page" Click="goBackBtn_Click" Grid.Column="3" Grid.Row="5"/>
 
