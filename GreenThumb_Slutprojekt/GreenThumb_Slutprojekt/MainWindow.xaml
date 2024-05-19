@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <!--<Grid.Background>
-            <ImageBrush ImageSource="Images/BgImage.jpg"/>
-        </Grid.Background>-->
+        <Grid.Background>
+            <ImageBrush ImageSource="GreenThumbBg.png"/>
+        </Grid.Background>
 
 
         <Grid.ColumnDefinitions>

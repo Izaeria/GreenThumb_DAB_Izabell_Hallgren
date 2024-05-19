@@ -24,19 +24,12 @@ namespace GreenThumb_Slutprojekt.Models
 
 		}
 
-
 		public PlantModel(string plantName)
 		{
 			PlantName = plantName;
 		}
 
 
-		public PlantModel(string plantName, int plantId, List<InstructionModel> instructions)
-		{
 
-			PlantName = plantName;
-			PlantId = plantId;
-			Instructions = instructions;
-		}
 	}
 }

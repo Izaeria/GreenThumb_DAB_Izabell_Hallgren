@@ -46,7 +46,7 @@ namespace GreenThumb_Slutprojekt
 
 
 
-
+		//Knapp för att gå tillbaka till föregående sida
 		private void goBackBtn_Click(object sender, RoutedEventArgs e)
 		{
 			PlantWindow plantWindow = new PlantWindow();

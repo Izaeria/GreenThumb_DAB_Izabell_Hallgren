@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="PlantWindow" Height="450" Width="800" Background="AliceBlue">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="GreenThumbBg.png"/>
+        </Grid.Background>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="150"/>

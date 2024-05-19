@@ -46,70 +46,60 @@ namespace GreenThumb_Slutprojekt.Database
 				new InstructionModel()
 				{
 					InstructionId = 1,
-					InstructionName = "Vattning",
 					Instructions = " Håll jorden jämnt fuktig, men låt inte växten stå i vatten. Vattna när det översta lagret av jord känns torrt.",
 					PlantId = 1,
 				},
 				new InstructionModel()
 				{
 					InstructionId = 2,
-					InstructionName = "Vattning",
 					Instructions = " Låt jorden torka något mellan vattningar. Undvik övervattning och låt inte växten stå i vatten.",
 					PlantId = 2,
 				},
 				new InstructionModel()
 				{
 					InstructionId = 3,
-					InstructionName = "Ljus",
 					Instructions = "Trivs bäst i indirekt solljus eller skuggiga områden.",
 					PlantId = 3,
 				},
 				new InstructionModel()
 				{
 					InstructionId = 4,
-					InstructionName = "Ljus",
 					Instructions = "Placera på en ljus plats med indirekt solljus.",
 					PlantId = 4,
 				},
 					new InstructionModel()
 					{
 						InstructionId = 5,
-						InstructionName = "Ljus",
 						Instructions = "Trivs i ljusa till delvis skuggiga områden.",
 						PlantId = 5,
 					},
 					new InstructionModel()
 					{
 						InstructionId = 6,
-						InstructionName = "Vattning",
 						Instructions = " Låt jorden torka något mellan vattningar. Undvik att övervattna.",
 						PlantId = 6,
 					},
 					new InstructionModel()
 					{
 						InstructionId = 7,
-						InstructionName = "Vattning",
 						Instructions = "Håll jorden fuktig, men undvik övervattning. Vattna när det översta lagret av jord känns torrt.",
 						PlantId = 7,
 					},
 					new InstructionModel()
 					{
 						InstructionId = 8,
-						InstructionName = "Vattning",
 						Instructions = " Håll jorden fuktig under sommaren och låt sedan torka något mellan vattningar under vintern.",
 						PlantId = 8,
 					},
 					new InstructionModel()
 					{
 						InstructionId = 9,
-						InstructionName = "Vattning",
 						Instructions = "Låt jorden torka helt mellan vattningar. Vattna sparsamt och undvik övervattning.",
 						PlantId = 9,
 					},
 					new InstructionModel()
 					{
 						InstructionId = 10,
-						InstructionName = "Ljus",
 						Instructions = "Trivs i ljusa till delvis skuggiga områden.",
 						PlantId = 10,
 					}
